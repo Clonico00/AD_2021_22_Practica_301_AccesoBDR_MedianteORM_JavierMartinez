@@ -1,4 +1,4 @@
-#Acceso a una BDR mediante ORM
+# Acceso a una BDR mediante ORM
 Utilizando el esquema de ORACLE que se anexa, crear una aplicación Java que utilizando Hibernate gestione los préstamos que realiza la compañía X almacenados en dicho esquema.
 Esta aplicación tendrá una pantalla similar a la siguiente en la que podremos:
 
