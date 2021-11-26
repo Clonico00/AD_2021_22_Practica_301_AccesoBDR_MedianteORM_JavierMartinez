@@ -561,7 +561,7 @@ public class MainJFrame extends javax.swing.JFrame {
         
         //comprobamos que estan rellenos el campo de la fecha, importe y forma de pago que son los que usaremos 
         //para actualizar el objeto
-        if(fechaChooser.getCalendar().toString().isEmpty() || importRecibText.getText().isEmpty()) {            
+        if(nPrestamoText.getText().isEmpty() || importRecibText.getText().isEmpty() || fechaChooser.getCalendar()==null) {
             JOptionPane.showMessageDialog(null,"Rellene los campos de fecha,importe, NºPrestamo y forma de pago para modificiar ","ERROR", 0);
            
         }else{
