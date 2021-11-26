@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-nov-2021 13:13:21 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelos.Prestamo" table="PRESTAMO" schema="AD_TEMA_03_RECIBOS" optimistic-lock="version">
+        <id name="NPrestamo" type="big_decimal">
+            <column name="N_PRESTAMO" precision="10" scale="6" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="formaPago" class="Modelos.FormaPago" fetch="select">
+            <column name="CODIGO_FORMA_PAGO" length="3" not-null="true" />
+        </many-to-one>
+        <property name="fecha" type="date">
+            <column name="FECHA" length="7" not-null="true" />
+        </property>
+        <property name="importe" type="big_decimal">
+            <column name="IMPORTE" precision="12" not-null="true" />
+        </property>
+        <property name="importePagado" type="big_decimal">
+            <column name="IMPORTE_PAGADO" precision="12" not-null="true" />
+        </property>
+        <set name="recibos" table="RECIBO" lazy="true" fetch="select" cascade="all" inverse = "true">
+            <key>
+                <column name="N_PRESTAMO" precision="10" scale="6" not-null="true" />
+            </key>
+            <one-to-many class="Modelos.Recibo" />
+        </set>
+    </class>
+</hibernate-mapping>

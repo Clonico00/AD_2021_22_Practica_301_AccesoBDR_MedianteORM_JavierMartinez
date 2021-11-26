@@ -1,0 +1,3 @@
+-Si borra todos los prestamos y se sale de la aplicacion luego no podra entrar, necesitara siempre uno.
+-Si no elige una forma de pago, por defecto sera Pago al contado.
+-Para pagar selecciona fila de la tabla recibos
